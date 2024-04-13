@@ -1,0 +1,21 @@
+{
+  "name": "to_do_api",
+  "version": "1.0.0",
+  "description": "to-do api para exercicios",
+  "main": "index.ts",
+  "scripts": {
+    "build":"rimraf .build/ && tsc",
+    "start": "build/index.js",
+    "dev":"ts-node-dev index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "toDo Typescript"
+  },
+  "author": "Rho (admechMars)",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
