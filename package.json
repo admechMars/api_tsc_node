@@ -4,9 +4,9 @@
   "description": "to-do api para exercicios",
   "main": "index.ts",
   "scripts": {
-    "build":"rimraf .build/ && tsc",
+    "build": "rimraf .build/ && tsc",
     "start": "build/index.js",
-    "dev":"ts-node-dev index.ts"
+    "dev": "ts-node-dev src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,11 @@
   "author": "Rho (admechMars)",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
