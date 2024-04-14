@@ -1,5 +1,7 @@
 import express from 'express';
 import {router} from './routes'
+import 'reflect-metadata'
+
 
 const server = express();
 const port = 2406

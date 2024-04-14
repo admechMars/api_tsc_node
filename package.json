@@ -6,20 +6,28 @@
   "scripts": {
     "build": "rimraf .build/ && tsc",
     "start": "build/index.js",
-    "dev": "ts-node-dev src/index.ts"
+    "dev": "ts-node-dev src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration-create":"npm run typeorm migration:create -n",
+    "migration:run":"npx typeorm-ts-node-commonjs migration:run -d src/database/index.ts",
+    "migration:revert":"npx typeorm-ts-node-commonjs migration:revert -d src/database/index.ts"
   },
   "repository": {
     "type": "git",
-    "url": "toDo Typescript"
+    "url": "https://github.com/admechMars/api_tsc_node"
   },
   "author": "Rho (admechMars)",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.20"
   }
 }
