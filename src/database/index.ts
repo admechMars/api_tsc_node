@@ -4,7 +4,7 @@ export const AppDataSource = new DataSource({
     type:"sqlite",
     database:"./src/database/db.sqlite",
     migrations:[
-        './src/database/*.ts'
+        './src/database/migrations/*.ts'
     ],
 })
 
