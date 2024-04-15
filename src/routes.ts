@@ -1,14 +1,14 @@
 import { Router } from "express";
-import {PostController} from "./controllers/PostController"
-import {GetController} from "./controllers/GetController"
+import { UserController } from "./controllers/UserController";
+import { GetController } from "./controllers/GetController";
 
 export const router = Router();
 
-const getController = new GetController()
-const postController = new PostController()
+const getController = new GetController();
+const userController = new UserController();
 
 //router.get('/',getController.getInfo)
 
-router.post('/user',  postController.createPost)
+router.post("/user", userController.createUsers);
 
-router.get('/user', postController.getAllUsers)
+router.get("/user", userController.getAllUsers);
