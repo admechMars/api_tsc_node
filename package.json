@@ -4,7 +4,7 @@
   "description": "to-do api para exercicios",
   "main": "index.ts",
   "scripts": {
-    "build": "rimraf .build/ && tsc",
+    "build": "rimraf .build/ && tsc && node build --output public ",
     "start": "build/index.js",
     "dev": "set PORT=5000 && ts-node-dev src/index.ts",
     "typeorm": "node ./node_modules/typeorm/cli.js",
