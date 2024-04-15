@@ -11,4 +11,4 @@ const userController = new UserController();
 
 router.post("/user", userController.createUsers);
 
-router.get("/user", userController.getAllUsers);
+router.get("/user", userController.getUser);
