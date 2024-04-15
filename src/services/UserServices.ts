@@ -1,20 +1,22 @@
-const db = [{
-    name:"",
-    email:""
-}]
+import { AppDataSource } from "../database";
+import { User } from "../entities/User";
+import { UserRepository } from "../repositories/UserRepository"
 
 export class UserServices{
-    createUser = (name: string, email:string) =>{
-        const user = {
-            name,
-            email,
-        }
-        db.push(user)
-        console.log("Db atualizado", db)
+    private userRepository : UserRepository;
+
+    constructor(
+        userRepository = new UserRepository(AppDataSource.manager),
+    ){
+        this.userRepository = userRepository
     }
 
-    getAllUsers = () =>{
-        return db
+    createUser = async (name: string, email:string, password: string) : Promise<User> =>{
+        const user = new User(name, email, password)
+        return this.userRepository.createUser(user)
+    }
+
+    getUser = () =>{
     }
     
 }
